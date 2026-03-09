@@ -12,7 +12,7 @@ function Home() {
 
         <div className="home-links">
           <a href="/auth" className="btn primary">Get Started</a>
-          <a href="/pricing" className="btn secondary">See Pricing</a>
+          <a href="/auth" className="btn secondary">Log In</a>
         </div>
       </div>
 
