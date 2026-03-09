@@ -1,36 +1,42 @@
 /* ---- PAGE LAYOUT ---- */
 .tasks-page {
-  padding: 3rem 4vw;
-  max-width: 1000px;
+  padding: 2rem 2rem;
+  max-width: 1400px;
   margin: 0 auto;
-  color: #fff;
+  color: #cbd5e1;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
   min-height: 100vh;
+  background-color: #0f172a;
 }
 
 .page-title {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2.25rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  color: #f8fafc;
 }
 
 /* ---- AI SECTION ---- */
 .ai-task-section {
-  background: linear-gradient(145deg, #1e1e1e, #252525);
-  border: 1px solid #333;
-  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(30,41,59,0.8), rgba(30,41,59,0.6));
+  border: 1px solid rgba(60,165,255,0.12);
+  border-radius: 0.75rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.ai-task-section:hover {
+  border-color: rgba(60,165,255,0.3);
 }
 
 .ai-header h3 {
   font-size: 1.1rem;
-  color: #a78bfa; /* Soft purple */
+  color: #60a5fa;
   margin: 0 0 0.3rem 0;
 }
 
