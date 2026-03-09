@@ -87,10 +87,10 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-  transition: border-color 0.25s;
-}
+
 button:hover {
   border-color: #646cff;
+  transition: border-color 0.25s;
 }
 button:focus,
 button:focus-visible {
