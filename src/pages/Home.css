@@ -1,0 +1,126 @@
+/* PAGE WRAPPER */
+.home-container {
+  min-height: 100vh;
+  padding: 2rem 2rem;
+  background: #0f172a;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* HERO SECTION */
+.home-hero {
+  text-align: center;
+  max-width: 900px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.home-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+}
+
+.home-subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.home-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  border: 1.5px solid #60a5fa;
+  color: #60a5fa;
+  background: transparent;
+}
+
+.btn.secondary:hover {
+  background: rgba(60, 165, 255, 0.12);
+  border-color: #93c5fd;
+  color: #93c5fd;
+}
+
+/* FEATURES SECTION */
+.home-features {
+  max-width: 900px;
+  width: 100%;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.features-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f1f5f9;
+}
+
+.home-features ul {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.home-features li {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  color: #cbd5e1;
+  border: 1px solid rgba(60, 165, 255, 0.12);
+  transition: all 0.2s ease;
+}
+
+.home-features li:hover {
+  transform: translateY(-2px);
+  border-color: rgba(60, 165, 255, 0.3);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.85));
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

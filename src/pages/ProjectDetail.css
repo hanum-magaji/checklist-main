@@ -1,0 +1,361 @@
+.project-detail-page {
+  padding: 3rem 4vw;
+  max-width: 1300px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.project-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1.5rem;
+}
+
+.project-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.project-header p {
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+.view-toggle {
+  display: flex;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.view-toggle button {
+  background: transparent;
+  border: none;
+  color: #888;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.view-toggle button:hover {
+  color: white;
+}
+
+.view-toggle button.active {
+  background: #4f46e5;
+  color: white;
+}
+
+.toolbar {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-secondary {
+    background: #333;
+    border: 1px solid #444;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.btn-secondary:hover {
+    background: #444;
+}
+
+.groups-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  align-items: start; 
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.group-card {
+  background: #1a1a1a;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.group-card:hover {
+  border-color: #444;
+}
+
+/* Drag over effect */
+.group-card:active {
+    border-color: #4f46e5;
+}
+
+.group-header {
+  background: #252525;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.group-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.count-badge {
+  background: #333;
+  color: #888;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.group-items {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 50px; /* Ensure drop zone exists even if empty */
+}
+
+.req-item {
+  background: #111;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border-left: 3px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: flex-start;
+  transition: opacity 0.2s;
+  cursor: grab; /* Indicate draggable */
+}
+
+.req-item:active {
+    cursor: grabbing;
+}
+
+.req-item.priority-1 { border-left-color: #e53935; }
+.req-item.priority-2 { border-left-color: #ffb300; }
+.req-item.priority-3 { border-left-color: #43a047; }
+
+.req-item.completed {
+  opacity: 0.5;
+  background: #0f0f0f;
+}
+
+.req-item.completed .req-input {
+  text-decoration: line-through;
+  color: #555;
+}
+
+.req-content {
+  flex: 1;
+}
+
+.req-input {
+  background: transparent;
+  border: none;
+  color: #ddd;
+  width: 100%;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: none; 
+  overflow: hidden;
+  line-height: 1.5;
+  min-height: 24px;
+  padding: 0;
+  display: block;
+  cursor: text;
+}
+
+.req-input:focus {
+  outline: none;
+  color: #fff;
+  background: #111;
+  border-radius: 4px;
+}
+
+.req-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  min-width: 50px;
+}
+
+.checkbox-wrapper {
+  padding-top: 2px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  background: #1a1a1a;
+  margin: 0;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::after {
+  content: '✔';
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+}
+
+.badge {
+  font-size: 0.65rem;
+  padding: 4px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.p-1 { background: #e5393522; color: #e53935; }
+.p-2 { background: #ffb30022; color: #ffb300; }
+.p-3 { background: #43a04722; color: #43a047; }
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  color: #555;
+  padding: 2px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.btn-icon:hover { color: #e53935; }
+
+.priority-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.priority-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 8px;
+  width: 140px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  margin-top: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.priority-option {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ddd;
+  transition: background 0.2s;
+}
+
+.priority-option:hover {
+  background: #333;
+  color: white;
+}
+
+.priority-option.selected {
+  background: #4f46e5;
+  color: white;
+}
+
+.rec-tag {
+  font-size: 0.65rem;
+  color: #ffd700; /* Gold */
+  margin-left: 6px;
+  font-weight: bold;
+}
+
+.add-btn-small {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  background: transparent;
+  color: #666;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  border-top: 1px solid #2d2d2d;
+}
+.add-btn-small:hover {
+  background: #222;
+  color: #4f46e5;
+}
+
+.quick-add-form {
+  padding: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  background: #222;
+  border-top: 1px solid #2d2d2d;
+}
+
+.quick-add-form input {
+  flex: 1;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.quick-add-form input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.quick-add-form button {
+  padding: 0 14px;
+  font-size: 0.85rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.quick-add-form button:hover {
+  background: #3730a3;
+}
