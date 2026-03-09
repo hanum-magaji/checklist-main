@@ -1,10 +1,12 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
+import { useTheme } from "../context/ThemeContext";
 import "./AuthNavbar.css";
 
 export default function AuthNavbar() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const { isDark, toggleTheme } = useTheme();
 
   const isActive = (path) => pathname.startsWith(path);
 
@@ -50,6 +52,14 @@ export default function AuthNavbar() {
         </div>
 
         <div className="auth-navbar-right">
+          <button
+            className="nav-item theme-toggle"
+            onClick={toggleTheme}
+            title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {isDark ? "☀️" : "🌙"}
+          </button>
+
           <Link
             to="/settings"
             className={isActive("/settings") ? "nav-item active" : "nav-item"}

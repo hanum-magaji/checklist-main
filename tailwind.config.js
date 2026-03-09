@@ -4,9 +4,24 @@ export default {
     "./index.html",
     "./src/**/*.{js,jsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
+        // Light mode palette
+        light: {
+          50: "#ffffff",
+          100: "#f8fafc",
+          200: "#f1f5f9",
+          300: "#e2e8f0",
+          400: "#cbd5e1",
+          500: "#94a3b8",
+          600: "#64748b",
+          700: "#475569",
+          800: "#334155",
+          900: "#1e293b",
+          950: "#0f172a",
+        },
         // Dark mode palette
         dark: {
           50: "#f8f9fa",
@@ -21,7 +36,7 @@ export default {
           900: "#0f172a",
           950: "#020617",
         },
-        // Accent: Dark Blue
+        // Accent: Dark Blue (works for both modes)
         accent: {
           50: "#eff6ff",
           100: "#dbeafe",
@@ -35,6 +50,7 @@ export default {
           900: "#1e3a8a",
           950: "#0c2340",
         },
+      },
       },
       fontFamily: {
         sans: ["system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"],
