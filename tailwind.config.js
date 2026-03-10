@@ -51,7 +51,6 @@ export default {
           950: "#0c2340",
         },
       },
-      },
       fontFamily: {
         sans: ["system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"],
       },
@@ -77,4 +76,3 @@ export default {
   },
   plugins: [],
 }
-
