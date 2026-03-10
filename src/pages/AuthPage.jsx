@@ -94,7 +94,9 @@ export default function AuthPage() {
   return (
     <div className="auth-container fade-in">
       <div className="auth-card fade-up">
-        
+
+        <div className="auth-brand">Checklist</div>
+
         <h1 className="auth-title">
           {mode === "login" ? "Welcome Back" : "Create Account"}
         </h1>

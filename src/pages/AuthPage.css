@@ -20,6 +20,16 @@
   animation: fadeUp 0.8s ease-out;
 }
 
+/* Brand */
+.auth-brand {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
 .auth-title {
   font-size: 2rem;
   font-weight: 700;
