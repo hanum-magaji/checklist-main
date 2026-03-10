@@ -1,29 +1,37 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Home.css';
 
 function Home() {
   return (
     <div className="home-container">
-      <div className="home-hero">
-        <h1 className="home-title">Supercharge Your AI Projects</h1>
+      <section className="home-hero">
+        <h1 className="home-title">Checklist</h1>
         <p className="home-subtitle">
-          Turn ideas into actionable requirements with AI-powered automation.
+          Turn rough ideas into structured, actionable requirements — powered by AI.
         </p>
-
-        <div className="home-links">
-          <a href="/auth" className="btn primary">Get Started</a>
-          <a href="/auth" className="btn secondary">Log In</a>
+        <div className="home-actions">
+          <Link to="/auth?mode=signup" className="btn-primary">Get Started</Link>
+          <Link to="/auth?mode=login" className="btn-ghost">Log In</Link>
         </div>
-      </div>
+      </section>
 
-      <div className="home-features">
-        <h2 className="features-title">What You Can Do</h2>
+      <section className="home-features">
         <ul>
-          <li><strong>AI-Generated Requirements</strong> — Turn rough ideas into structured, actionable requirements.</li>
-          <li><strong>Automatic Prioritization</strong> — Let AI identify critical features for stakeholders.</li>
-          <li><strong>Track Progress</strong> — Monitor status, priorities, and requirement evolution.</li>
+          <li>
+            <span className="feature-label">AI Requirements</span>
+            <span className="feature-desc">Turn rough ideas into structured, actionable requirements.</span>
+          </li>
+          <li>
+            <span className="feature-label">Auto Prioritization</span>
+            <span className="feature-desc">Let AI identify critical features for your stakeholders.</span>
+          </li>
+          <li>
+            <span className="feature-label">Progress Tracking</span>
+            <span className="feature-desc">Monitor status, priorities, and requirement evolution.</span>
+          </li>
         </ul>
-      </div>
+      </section>
     </div>
   );
 }
