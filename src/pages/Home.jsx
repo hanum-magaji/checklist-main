@@ -6,7 +6,9 @@ function Home() {
   return (
     <div className="home-container">
       <section className="home-hero">
-        <h1 className="home-title">Checklist</h1>
+        <h1 className="text-center text-6xl md:text-8xl font-extrabold mx-auto">
+          Checklist
+        </h1>
         <p className="home-subtitle">
           Turn rough ideas into structured, actionable requirements — powered by AI.
         </p>
