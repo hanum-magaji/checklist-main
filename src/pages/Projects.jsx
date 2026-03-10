@@ -95,7 +95,7 @@ export default function Projects() {
           Manage your projects or join collaborations easily.
         </p>
 
-        <button 
+        <button
           className="create-project-button"
           onClick={() => navigate("/projects/new")}
         >
@@ -103,7 +103,7 @@ export default function Projects() {
         </button>
       </div>
 
-      {/* Search Bar */}
+      {/* Search Bar & Controls */}
       <div className="project-search-container fade-up">
         <input
           className="project-search"
@@ -111,6 +111,12 @@ export default function Projects() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+        <button
+          className="create-project-button"
+          onClick={() => navigate("/projects/new")}
+        >
+          Create Project
+        </button>
       </div>
 
       <div className="projects-grid fade-up">
@@ -129,9 +135,8 @@ export default function Projects() {
                 <h3 className="project-name">{p.name}</h3>
 
                 <span
-                  className={`role-badge ${
-                    p._role === "owner" ? "owner" : "collab"
-                  }`}
+                  className={`role-badge ${p._role === "owner" ? "owner" : "collab"
+                    }`}
                 >
                   {p._role === "owner" ? "Owner" : "Collaborator"}
                 </span>
